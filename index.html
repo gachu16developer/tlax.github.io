@@ -12,13 +12,14 @@
       color: #333;
       line-height: 1.6;
     }
-    header {
+   header {
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
       padding: 20px 20px 40px 20px;
-      text-align: center;
       display: flex;
       align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     header img {
       width: 100px;
@@ -31,6 +32,11 @@
       margin: 0;
       font-size: 2.2rem;
     }
+    header .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
     header p {
       margin-top: 5px;
       font-size: 1.1rem;
@@ -69,13 +75,21 @@
       font-size: 0.9rem;
       color: #666;
     }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      header img {
+        margin: 0 0 15px 0;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="tarun.jpg" alt="Tarun Photo" />
-    <div>
+    <div class="header-text">
       <h1>Tarun</h1>
       <p>Young Chess Player | Triathlete | Soccer Enthusiast</p>
     </div>
